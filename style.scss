@@ -20,6 +20,11 @@
     border-radius: $radius;
 }
 
+@mixin custom-row-text($font-size, $margin) {
+    font-size: $font-size;
+    margin: $margin;
+}
+
 @mixin btn($color, $bg-color, $font-size) {
     border: none;
     color: $color;
@@ -174,18 +179,15 @@
             }
 
             &__description {
-                font-size: 14px;
-                margin: 5px 10px;
+                @include custom-row-text(14px, 5px 10px);
             }
 
             &__comment-list {
-                font-size: 14px;
-                margin: 5px 10px;
+                @include custom-row-text(14px, 5px 10px);
             }
 
             &__timestamp {
-                font-size: 12px;
-                margin: 5px 10px;
+                @include custom-row-text(14px, 5px 10px);
             }
 
             &__comment {
