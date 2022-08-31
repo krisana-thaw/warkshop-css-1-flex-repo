@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @mixin flex-row() {
     display: flex;
     flex-direction: row;
@@ -22,17 +28,58 @@
     cursor: pointer;
 }
 
+.navContainer {
+    @include flex-row();
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px #000000 solid;
+    padding: 12px 17% 7px;
+    font-family: "Poppins";
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+
+    &__image {
+        @include custom-image-round(107px, 33px, 0%);
+        padding-top: 4px;
+    }
+
+    &__search {
+        font-size: 16px;
+        padding: 5px;
+        margin-bottom: 5px;
+        margin-left: 150px;
+        width: 250px;
+        border-radius: 7px;
+        background-color: #EFEFEF;
+        border: 0px;
+    }
+
+    &__icon-list {
+        @include flex-row();
+        justify-content: center;
+        padding-top: 4px;
+
+        &__icon {
+            font-size: 24px;
+            width: 47px;
+        }
+
+        &__me {
+            @include custom-image-round(25px, 25px, 50%)
+        }
+    }
+}
 
 .container {
     @include flex-row();
     width: 60%;
     font-family: "Poppins";
-    border: 1px black solid;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 90px;
 
     .post-container {
-        border: 1px black solid;
         width: 55%;
 
         .story-container {
@@ -40,7 +87,7 @@
             overflow-x: auto;
             width: 100%;
             border: 1px #000000 solid;
-            border-radius: 2%;
+            border-radius: 7px;
 
             &__list {
                 @include flex-column();
@@ -61,12 +108,108 @@
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    padding-top: 5px;
                 }
             }
         }
 
         .post-frame {
+            @include flex-column();
+        }
+
+        .post-list {
+            @include flex-column();
             border: 1px black solid;
+            border-radius: 7px;
+            margin-top: 18px;
+
+            &__title {
+                @include flex-row();
+                margin: 10px;
+
+                &__image {
+                    @include custom-image-round(40px, 40px, 50%);
+                }
+
+                &__text {
+                    @include flex-column();
+                    flex-grow: 1;
+                    font-size: 14px;
+                    justify-content: center;
+                    padding-left: 15px;
+
+                    &__sub {
+                        font-size: 12px;
+                    }
+                }
+
+                &__button {
+                    @include btn(rgb(0, 115, 222), #ffffff, 25px);
+                    padding-bottom: 12px;
+                }
+            }
+
+            &__image {
+                @include custom-image-round(100px, 100px, 0%);
+                width: 100%;
+                height: auto;
+            }
+
+            &__action-icon {
+                @include flex-row();
+                justify-content: space-between;
+                padding: 10px 10px 0px;
+
+                &__icon-list {
+                    @include flex-row();
+                    justify-content: space-between;
+                    width: 23%;
+                    font-size: 25px;
+
+                }
+
+                &__icon-save {
+                    font-size: 24px;
+                }
+            }
+
+            &__description {
+                font-size: 14px;
+                margin: 5px 10px;
+            }
+
+            &__comment-list {
+                font-size: 14px;
+                margin: 5px 10px;
+            }
+
+            &__timestamp {
+                font-size: 12px;
+                margin: 5px 10px;
+            }
+
+            &__comment {
+                @include flex-row();
+                justify-content: space-between;
+                border-top: 1px black solid;
+
+                &__icon {
+                    font-size: 25px;
+                    padding: 5px 10px 0px;
+                }
+
+                &__input {
+                    width: 100%;
+                    border: 0px;
+                    padding-left: 10px;
+                }
+
+                &__button {
+                    @include btn(rgb(0, 115, 222), #ffffff, 16px);
+                    padding: 10px;
+                    border-radius: 7px;
+                }
+            }
         }
     }
 
@@ -89,6 +232,10 @@
                 font-size: 14px;
                 justify-content: center;
                 padding-left: 15px;
+
+                &__sub {
+                    color: #767676
+                }
             }
 
             &__button {
@@ -102,6 +249,7 @@
             &__title {
                 @include flex-row();
                 justify-content: space-between;
+                margin: 18px 7px;
 
                 &__button {
                     @include btn(#000000, #ffffff, 14px);

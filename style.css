@@ -1,14 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px #000000 solid;
+  padding: 12px 17% 7px;
+  font-family: "Poppins";
+  position: fixed;
+  top: 0;
+  background-color: #ffffff;
+}
+.navContainer__image {
+  width: 107px;
+  height: 33px;
+  border-radius: 0%;
+  padding-top: 4px;
+}
+.navContainer__search {
+  font-size: 16px;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-left: 150px;
+  width: 250px;
+  border-radius: 7px;
+  background-color: #EFEFEF;
+  border: 0px;
+}
+.navContainer__icon-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 4px;
+}
+.navContainer__icon-list__icon {
+  font-size: 24px;
+  width: 47px;
+}
+.navContainer__icon-list__me {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   width: 60%;
   font-family: "Poppins";
-  border: 1px black solid;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 90px;
 }
 .container .post-container {
-  border: 1px black solid;
   width: 55%;
 }
 .container .post-container .story-container {
@@ -17,7 +66,7 @@
   overflow-x: auto;
   width: 100%;
   border: 1px #000000 solid;
-  border-radius: 2%;
+  border-radius: 7px;
 }
 .container .post-container .story-container__list {
   display: flex;
@@ -40,9 +89,106 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-top: 5px;
 }
 .container .post-container .post-frame {
+  display: flex;
+  flex-direction: column;
+}
+.container .post-container .post-list {
+  display: flex;
+  flex-direction: column;
   border: 1px black solid;
+  border-radius: 7px;
+  margin-top: 18px;
+}
+.container .post-container .post-list__title {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.container .post-container .post-list__title__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.container .post-container .post-list__title__text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 14px;
+  justify-content: center;
+  padding-left: 15px;
+}
+.container .post-container .post-list__title__text__sub {
+  font-size: 12px;
+}
+.container .post-container .post-list__title__button {
+  border: none;
+  color: rgb(0, 115, 222);
+  background-color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+  padding-bottom: 12px;
+}
+.container .post-container .post-list__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 0%;
+  width: 100%;
+  height: auto;
+}
+.container .post-container .post-list__action-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px 0px;
+}
+.container .post-container .post-list__action-icon__icon-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 23%;
+  font-size: 25px;
+}
+.container .post-container .post-list__action-icon__icon-save {
+  font-size: 24px;
+}
+.container .post-container .post-list__description {
+  font-size: 14px;
+  margin: 5px 10px;
+}
+.container .post-container .post-list__comment-list {
+  font-size: 14px;
+  margin: 5px 10px;
+}
+.container .post-container .post-list__timestamp {
+  font-size: 12px;
+  margin: 5px 10px;
+}
+.container .post-container .post-list__comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px black solid;
+}
+.container .post-container .post-list__comment__icon {
+  font-size: 25px;
+  padding: 5px 10px 0px;
+}
+.container .post-container .post-list__comment__input {
+  width: 100%;
+  border: 0px;
+  padding-left: 10px;
+}
+.container .post-container .post-list__comment__button {
+  border: none;
+  color: rgb(0, 115, 222);
+  background-color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 7px;
 }
 .container .info-container {
   display: flex;
@@ -68,6 +214,9 @@
   justify-content: center;
   padding-left: 15px;
 }
+.container .info-container .main-card__text__sub {
+  color: #767676;
+}
 .container .info-container .main-card__button {
   border: none;
   color: rgb(0, 115, 222);
@@ -83,6 +232,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 18px 7px;
 }
 .container .info-container .suggestion__title__button {
   border: none;
