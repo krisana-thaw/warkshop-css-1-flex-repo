@@ -98,7 +98,7 @@
 .container .post-container .post-list {
   display: flex;
   flex-direction: column;
-  border: 1px black solid;
+  border: 1px #000000 solid;
   border-radius: 7px;
   margin-top: 18px;
 }
@@ -170,7 +170,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 1px black solid;
+  border-top: 1px #000000 solid;
 }
 .container .post-container .post-list__comment__icon {
   font-size: 25px;
