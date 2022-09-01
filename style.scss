@@ -37,7 +37,7 @@
     @include flex-row();
     width: 100%;
     justify-content: space-between;
-    border-bottom: 1px #000000 solid;
+    border-bottom: 1px #DBDBDB solid;
     padding: 12px 17% 7px;
     font-family: "Poppins";
     position: fixed;
@@ -91,7 +91,7 @@
             @include flex-row();
             overflow-x: auto;
             width: 100%;
-            border: 1px #000000 solid;
+            border: 1px #DBDBDB solid;
             border-radius: 7px;
 
             &__list {
@@ -124,7 +124,7 @@
 
         .post-list {
             @include flex-column();
-            border: 1px #000000 solid;
+            border: 1px #DBDBDB solid;
             border-radius: 7px;
             margin-top: 18px;
 
@@ -193,7 +193,7 @@
             &__comment {
                 @include flex-row();
                 justify-content: space-between;
-                border-top: 1px #000000 solid;
+                border-top: 1px #DBDBDB solid;
 
                 &__icon {
                     font-size: 25px;
